@@ -9,7 +9,7 @@ let jason = fetch(peticion_link)
 		}
 	});
 */
-let contenedor = document.querySelector('.col>.row');
+let contenedor = document.querySelector('.col>.row-pokemon');
 
 async function getData(){
     let response = await fetch('https://gist.githubusercontent.com/gabiito/b4fc1eea26154919d29d14f936a67428/raw/a990d9fa46336a5738a02a9f52051c0b9bfe47f2/pokedata.json');
@@ -27,12 +27,19 @@ document.addEventListener('DOMContentLoaded', async function(){
 })
 
 printCard = (pokemon) =>{
+    types =(pokemon)=>{
+        if(pokemon.types.length>1){
+            pokemon.types[0].type.name; pokemon.types[1].type.name;
+        }else{
+            pokemon.types[0].type.name;
+        }
+    };
     let card = `
-    <div class="card" style="width: 18rem;">
+    <div class="card col m-1" style="width: 18rem;">
               <img src="${pokemon.sprites.front_default}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">${pokemon.name}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">tipo:${pokemon.types[0].type.name} ${pokemon.types[1].type.name}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">tipo:${types(pokemon)}</h6>
                 `
     for (let index = 0; index < pokemon.stats.length; index++) {
         card += `<p class="card-text">${pokemon.stats[index].stat.name}:${pokemon.stats[index].base_stat}</p>`        

@@ -1,10 +1,28 @@
-function showAlertSuccess() {
-    document.getElementById("alert-success").classList.add("show");
-}
+const success = document.getElementById("alert-success");
+const danger = document.getElementById("alert-danger");
+const success_btn = document.querySelector("#alert-success>.btn-close");
+const danger_btn = document.querySelector("#alert-danger>.btn-close");
 
+function showAlertSuccess() {
+    success.classList.add("show");
+};
 function showAlertError() {
-    document.getElementById("alert-danger").classList.add("show");
-}
+    danger.classList.add("show");
+};
+function notShowAlertSuccess() {
+    success.classList.remove("show");
+};
+function notShowAlertError() {
+    danger.classList.remove("show");
+};
+
+danger_btn.addEventListener('click',()=>{
+    notShowAlertError();
+});
+success_btn.addEventListener('click',()=>{
+    notShowAlertSuccess();
+});
+
 
 const inputs =document.querySelectorAll('input');
 const terminos = document.getElementById('terminos');
@@ -22,9 +40,10 @@ boton.addEventListener('click', ()=>{
             vacio=true;
         }
     })
-    if(vacio,psswd_length,psswd_equal,check){
-        showAlertError()
+    if(vacio||psswd_length||psswd_equal||check){
+        showAlertError();
     }else{
-        showAlertSuccess()
+        showAlertSuccess();
     }
 })
+

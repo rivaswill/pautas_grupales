@@ -1,6 +1,12 @@
-  .container {
-    max-width: 960px;
-  }
+.container {
+  max-width: 960px;
+}
+.fade{
+    display: none;
+}
+.show{
+    display: block;
+}
 
   .alert {
     position: fixed;
