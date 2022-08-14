@@ -9,22 +9,16 @@ function showAlertSuccess() {
 function showAlertError() {
     danger.classList.add("show");
 };
-function notShowAlertSuccess() {
-    success.classList.remove("show");
-};
-function notShowAlertError() {
-    danger.classList.remove("show");
-};
 
 danger_btn.addEventListener('click',()=>{
-    notShowAlertError();
+    danger.classList.remove("show");
 });
 success_btn.addEventListener('click',()=>{
-    notShowAlertSuccess();
+    success.classList.remove("show");
 });
 
 
-const inputs =document.querySelectorAll('input');
+const inputs =document.querySelectorAll('.form-control');
 const terminos = document.getElementById('terminos');
 const password1 = document.getElementById('password1');
 const password2 = document.getElementById('password2');
@@ -33,7 +27,7 @@ const boton = document.getElementById('regBtn');
 boton.addEventListener('click', ()=>{
     let vacio = false;
     let psswd_length = password1.value.length < 6;
-    let psswd_equal = password1 != password2;
+    let psswd_equal = password1.value != password2.value;
     let check = terminos.checked == false;
     inputs.forEach((input) =>{
         if (input.value == ''){
