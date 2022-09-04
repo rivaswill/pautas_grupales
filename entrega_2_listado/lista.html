@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>Lista de tareas</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-light">
+  <div class="container">
+    <main>
+      <h1 class="my-3">lista de tareas</h1>
+      <hr class="my-4">
+
+
+      <div id="contenedor">
+
+      </div>
+
+      <div class="card cnt">
+        <div class="card-body">
+            <div class="row justify-content-center">
+                <div class="col-7">
+                    <h2>Otra tarea</h2>
+                    <p>descripción de la tarea a realizar...</p>
+                </div>
+                <div class="col-1">
+                    <ul class="list-group col-sm-0">
+                      <li class="list-group-item btn" id="editar"><i class="bi bi-pencil-square"></i></li>
+                      <li class="list-group-item btn" id="complet"><i class="bi bi-check-square"></i></li>
+                      <li class="list-group-item btn" id="importn"><i class="bi bi-exclamation-square"></i></li>
+                      <li class="list-group-item btn" id="elimin"><i class="bi bi-x-square"></i></li>
+                    </ul>
+                </div>
+            </div>
+          <hr class="my-4">
+
+          <div class="col-sm-8 ">
+            <label for="titulo" class="form-label"></label>
+            <input type="text" class="form-control" id="titulo" placeholder="Titulo">
+
+            <label for="descript" class="form-label"></label>
+            <input type="text" class="form-control" id="descript" placeholder="Descripción">
+
+            <div class="d-grid">
+              <button type="button" class="btn btn-primary my-3" id="agregar">Agregar</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </main>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> - 2022</p>
+      <p class="mb-1">Generado con fines estrictamente educativos.</p>
+    </footer>
+  </div>
+  <script src="js/lista.js"></script>
+
+
+  <style>
+
+    .col-sm-8{
+        margin: auto;
+    }
+  </style>
+</body>
+
+</html>
