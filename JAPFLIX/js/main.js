@@ -16,13 +16,13 @@ const search =()=>{
 
 const getHTML =(e)=>{
     let get = `
-    <li class="list-group-item mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+    <li class="list-group-item mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop${e.id}" aria-controls="offcanvasTop">
         <h2>${e.title}</h2>
         <p>${e.tagline}</p>
         <span>${star(e)}</span>
     </li>
 
-    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop${e.id}" aria-labelledby="offcanvasTopLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasTopLabel">${e.title}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
