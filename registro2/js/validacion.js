@@ -47,4 +47,4 @@ if (!check.checked) {
    btnTerm.classList.toggle("invalido")
    termyserv.classList.toggle("tys")
 }
-)
+  }) }
