@@ -10,6 +10,7 @@
       .forEach(function (form) {
         form.addEventListener('submit', function (event) {
           if (!form.checkValidity()) {
+            validarContrasena()
             event.preventDefault()
             event.stopPropagation()
           }
@@ -51,12 +52,15 @@ if (!check.checked) {
 
 
 // funcion para chequear y validar contraseña. 
-  function validarContraseña() {
-    const contraseña2 = document.getElementById("password2");
-    const contraseña1 = document.getElementById("password1");
-    if (contraseña2.value === contraseña1.value && contraseña1.checkValidity()) {
-      contraseña2.setCustomValidity("");
+const contrasena2 = document.getElementById("password2");
+const contrasena1 = document.getElementById("password1");
+  function validarContrasena() {
+    if (contrasena2.value === contrasena1.value && contrasena1.checkValidity()) {
+      contrasena2.setCustomValidity("");
     } else {
-      contraseña2.setCustomValidity('Debe ser igual a "contraseña"');
+      contrasena2.setCustomValidity('Debe ser igual a "contraseña"');
     }
+    contrasena2.reportValidity();
   }
+
+contrasena2.addEventListener('input', validarContrasena);
