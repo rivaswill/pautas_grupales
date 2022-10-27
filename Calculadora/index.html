@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculadora</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="calculadora.css" />
+  </head>
+  <body>
+    <div class="calculadora">
+      <div class="pantallita">
+        <div class="gray">
+          <div class="item1"></div>
+          <div class="item2"></div>
+        </div>
+        <div class="result"></div>
+      </div>
+      <div class="btn oper mas" onclick="getOpes(this)">+</div>
+      <div class="btn oper menos" onclick="getOpes(this)">-</div>
+      <div class="btn oper mult" onclick="getOpes(this)">x</div>
+      <div class="btn oper div" onclick="getOpes(this)">/</div>
+      <div class="btn num btn7" onclick="getBtn(this)">7</div>
+      <div class="btn num btn8" onclick="getBtn(this)">8</div>
+      <div class="btn num btn9" onclick="getBtn(this)">9</div>
+      <div class="btn num btn4" onclick="getBtn(this)">4</div>
+      <div class="btn num btn5" onclick="getBtn(this)">5</div>
+      <div class="btn num btn6" onclick="getBtn(this)">6</div>
+      <div class="btn num btn1" onclick="getBtn(this)">1</div>
+      <div class="btn num btn2" onclick="getBtn(this)">2</div>
+      <div class="btn num btn3" onclick="getBtn(this)">3</div>
+      <div class="btn num btn0" onclick="getBtn(this)">0</div>
+      <div class="btn btnPto" onclick="getBtn(this)">.</div>
+      <div class="btn btnC" onclick="borrar()">c</div>
+      <div class="btn igual" onclick="igual()">=</div>
+    </div>
+
+    <script src="calculadora.js"></script>
+  </body>
+</html>

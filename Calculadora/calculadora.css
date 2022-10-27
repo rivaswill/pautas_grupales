@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: rgb(215, 222, 204);
+}
+.calculadora {
+  display: grid;
+  background-color: rgb(30, 110, 139);
+  border-radius: 1rem;
+  width: 500px;
+  height: 700px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1.7fr repeat(5, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+.btn,
+.pantallita {
+  color: #fff;
+  display: flex;
+  flex: 1 1 125px;
+  flex-flow: row wrap;
+}
+.btn {
+  font-size: 2rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.igual {
+  grid-column: 4;
+  grid-row: 3 / span 5;
+  background-color: rgb(173, 82, 177);
+  border-radius: 1rem;
+}
+.oper {
+  background-color: rgb(79, 114, 127);
+  border-radius: 1rem;
+}
+
+.pantallita {
+  grid-column: span 4;
+  display: grid;
+  grid-template-rows: .4fr 1fr;
+  justify-content: stretch;
+  align-items: end;
+  
+}
+.result{
+    font-size: 4rem;
+    text-align: end;
+}
+.gray{
+    font-size: 1.5rem;
+    color: rgb(121, 130, 176);
+    display: flex;
+    justify-content: space-around;
+}
+[class^='item']{
+    flex: 1 1 auto;
+    padding: 0 1rem;
+}
+.item2{
+    text-align: end;
+}
