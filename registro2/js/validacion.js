@@ -26,21 +26,6 @@ const check = document.getElementById("terminos");
 const btnRegistrar = document.getElementById("registrar"); 
 const termyserv = document.querySelector(".tys"); 
 
-// btnRegistrar.addEventListener("click",() => { 
-//     if (! check.checked) {
-//        termyserv.classList.toggle("tys")
-//         btnTerm.classList.toggle("invalido")
-//     }
-// })
-
-// // Si btnTerm tiene la clase invalido, al darle click al check se elimina esa clase 
-
-// check.addEventListener("click",() => { 
-//     if (btnTerm.className.indexOf("invalido") >= 0) {
-//         btnTerm.classList.toggle("invalido") 
-//         termyserv.classList.toggle("tys") 
-//     }
-// })
 
 if (!check.checked) {
     btnRegistrar.addEventListener("click",() => { 
