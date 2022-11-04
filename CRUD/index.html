@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,8 +24,8 @@
                     <div class="col-md-6">
                         <div class="border p-3 my-3 position-relative" id="get-box">
                             <h6>Buscar registro</h6>
-                            <input type="number" id="inputGet1Id" class="form-control" placeholder="ID a buscar">
-                            <button id="btnGet1" class="btn btn-primary position-absolute bottom-0 mb-3">Buscar</button>
+                            <input type="number" id="inputGet1Id" class="form-control" placeholder="ID a buscar" min="1">
+                            <button id="btnGet1" class="btn btn-primary position-absolute bottom-0 mb-3" onclick="getHTML('GET',this)">Buscar</button>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -32,7 +33,7 @@
                             <h6>Ingresar nuevo registro</h6>
                             <input type="text" id="inputPostNombre" class="form-control my-1" placeholder="Nombre">
                             <input type="text" id="inputPostApellido" class="form-control my-1" placeholder="Apellido">
-                            <button id="btnPost" class="btn btn-success position-absolute bottom-0 mb-3" disabled>
+                            <button id="btnPost" class="btn btn-success position-absolute bottom-0 mb-3" onclick="getHTML('POST',this)" disabled>
                                 Agregar</button>
                         </div>
                     </div>
@@ -42,8 +43,8 @@
                         <div class="border p-3 my-3 position-relative" id="put-box">
                             <h6>Modificar registro</h6>
                             <input type="number" id="inputPutId" class="form-control"
-                                placeholder="ID del registro a modificar">
-                            <button id="btnPut" class="btn btn-warning position-absolute bottom-0 mb-3" disabled>
+                                placeholder="ID del registro a modificar" min="1">
+                            <button id="btnPut" class="btn btn-warning position-absolute bottom-0 mb-3" onclick="getHTML('PUT',this)" disabled>
                                 Modificar</button>
                         </div>
                     </div>
@@ -51,14 +52,14 @@
                         <div class="border p-3 my-3 position-relative" id="delete-box">
                             <h6>Eliminar registro</h6>
                             <input type="number" id="inputDelete" class="form-control" placeholder="ID a eliminar">
-                            <button id="btnDelete" class="btn btn-danger position-absolute bottom-0 mb-3" disabled>
+                            <button id="btnDelete" class="btn btn-danger position-absolute bottom-0 mb-3" onclick="getHTML('DELETE',this)" disabled>
                                 Borrar</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <ul class="border bg-dark text-white my-3 list-group list-group-flush" id="results"></ul>
+                <ul class="border bg-dark text-white my-3 list-group list-group-flush" id="results"> </ul>
             </div>
         </div>
     </main>
@@ -67,7 +68,7 @@
                 Programar</a> - 2022</p>
         <p class="mb-1">Generado con fines estrictamente educativos.</p>
     </footer>
-    <div class="alert alert-danger fade" id="alert-error" role="alert">
+    <div class="alert alert-danger fade" id="alert-danger" role="alert">
         Algo salió mal...
     </div>
     <div class="modal fade" tabindex="-1" id="dataModal">
@@ -86,8 +87,26 @@
             </div>
         </div>
     </div>
+    <style>
+        #results{
+            padding: 1rem .5rem;
+        }
+        #results li{
+            display: flex;
+            flex-flow: row wrap;
+            height: 2rem;
+            gap: .5rem;
+        }
+        #results li span{
+            font-size: 1.5rem;
+            flex: 4 1 ;
+            text-align: center;
+        }
+        #results li span:nth-child(1){
+            flex: 1 1 ;
+        }
+    </style>
     <script src="scripts/bootstrap.bundle.js"></script>
     <script src="scripts/jotaese.js"></script>
 </body>
-
 </html>
